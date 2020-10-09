@@ -1,0 +1,150 @@
+{
+  "is_retro": {
+    "mercury": true,
+    "venus": true,
+    "mars": true,
+    "jupiter": true,
+    "saturn": true,
+    "uranus": true,
+    "neptune": true,
+    "pluto": true
+  },
+  "retro_periods": {
+    "mercury": [
+      {
+        "year": 2020,
+        "period": "February 17 - March 10",
+        "startDateTime": 1581850800000,
+        "endDateTime": 1583751600000,
+        "startDate": "February 17",
+        "endDate": "March 10",
+        "startDateMonth": "February",
+        "startDateDay": "17",
+        "endDateMonth": "March",
+        "endDateDay": "10"
+      },
+      {
+        "year": 2020,
+        "period": "June 18 - July 12",
+        "startDateTime": 1592395200000,
+        "endDateTime": 1594468800000,
+        "startDate": "June 18",
+        "endDate": "July 12",
+        "startDateMonth": "June",
+        "startDateDay": "18",
+        "endDateMonth": "July",
+        "endDateDay": "12"
+      },
+      {
+        "year": 2020,
+        "period": "October 14 - November 3",
+        "startDateTime": 1602586800000,
+        "endDateTime": 1604314800000,
+        "startDate": "October 14",
+        "endDate": "November 3",
+        "startDateMonth": "October",
+        "startDateDay": "14",
+        "endDateMonth": "November",
+        "endDateDay": "3"
+      }
+    ],
+    "venus": [
+      {
+        "year": 2020,
+        "period": "May 13 - June 25",
+        "startDateTime": 1589284800000,
+        "endDateTime": 1593000000000,
+        "startDate": "May 13",
+        "endDate": "June 25",
+        "startDateMonth": "May",
+        "startDateDay": "13",
+        "endDateMonth": "June",
+        "endDateDay": "25"
+      }
+    ],
+    "mars": [
+      {
+        "year": 2020,
+        "period": "September 9 - November 12",
+        "startDateTime": 1599566400000,
+        "endDateTime": 1605092400000,
+        "startDate": "September 9",
+        "endDate": "November 12",
+        "startDateMonth": "September",
+        "startDateDay": "9",
+        "endDateMonth": "November",
+        "endDateDay": "12"
+      }
+    ],
+    "jupiter": [
+      {
+        "year": 2020,
+        "period": "May 14 - September 12",
+        "startDateTime": 1589371200000,
+        "endDateTime": 1599825600000,
+        "startDate": "May 14",
+        "endDate": "September 12",
+        "startDateMonth": "May",
+        "startDateDay": "14",
+        "endDateMonth": "September",
+        "endDateDay": "12"
+      }
+    ],
+    "saturn": [
+      {
+        "year": 2020,
+        "period": "May 11- September 29",
+        "startDateTime": 1589112000000,
+        "endDateTime": 1601290800000,
+        "startDate": "May 11",
+        "endDate": "September 29",
+        "startDateMonth": "May",
+        "startDateDay": "11",
+        "endDateMonth": "September",
+        "endDateDay": "29"
+      }
+    ],
+    "uranus": [
+      {
+        "year": 2020,
+        "period": "August 15 - January 14",
+        "startDateTime": 1597406400000,
+        "endDateTime": 1578913200000,
+        "startDate": "August 15",
+        "endDate": "January 14",
+        "startDateMonth": "August",
+        "startDateDay": "15",
+        "endDateMonth": "January",
+        "endDateDay": "14"
+      }
+    ],
+    "neptune": [
+      {
+        "year": 2020,
+        "period": "June 22 - November 28",
+        "startDateTime": 1592740800000,
+        "endDateTime": 1606474800000,
+        "startDate": "June 22",
+        "endDate": "November 28",
+        "startDateMonth": "June",
+        "startDateDay": "22",
+        "endDateMonth": "November",
+        "endDateDay": "28"
+      }
+    ],
+    "pluto": [
+      {
+        "year": 2020,
+        "period": "April 25 - October 4",
+        "startDateTime": 1587729600000,
+        "endDateTime": 1601722800000,
+        "startDate": "April 25",
+        "endDate": "October 4",
+        "startDateMonth": "April",
+        "startDateDay": "25",
+        "endDateMonth": "October",
+        "endDateDay": "4"
+      }
+    ]
+  }
+}
