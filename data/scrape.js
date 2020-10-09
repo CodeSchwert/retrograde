@@ -75,6 +75,7 @@ const planetScrap = async (planet) => {
       const root = parse(results);
       const dates = root.querySelectorAll('.planet-info h3');
 
+      // loop through the list of `h3`'s even if there is 1 element
       for (const el of dates) {
         const dateText = el.innerText;
 
@@ -84,12 +85,6 @@ const planetScrap = async (planet) => {
           : dateText.split(' - ');
         const [startDateMonth, startDateDay] = startDate.split(' ');
         const [endDateMonth, endDateDay] = endDate.split(' ');
-
-        // console.log(el.innerText);
-        // console.log([startDate, endDate]);
-        // console.log([startDateMonth, startDateDay]);
-        // console.log([endDateMonth, endDateDay]);
-
         const startDateTime = new Date(year, monthInt(startDateMonth), startDateDay).getTime();
         const endDateTime = new Date(year, monthInt(endDateMonth), endDateDay).getTime();
 
@@ -127,7 +122,7 @@ const scrap = async (planetsArr) => {
 
     console.log(retros)
 
-    const dataFolder = path.join(__dirname, 'data', 'retro.json');
+    const dataFolder = path.join(__dirname, 'retro.json');
     fs.writeFileSync(dataFolder, JSON.stringify(retros, null, 2));
   } catch (e) {
     console.error(e);
