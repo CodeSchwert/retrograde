@@ -89,9 +89,9 @@ components:
     RetrogradeData:
       type: object
       properties:
-        is_retro:
+        isRetro:
           $ref: '#/components/schemas/IsRetro'
-        retro_periods:
+        retroPeriods:
           type: object
           properties:
             mercury:
@@ -111,8 +111,15 @@ components:
             pluto:
               $ref: '#/components/schemas/PlanetRetroPeriods'
       example:
-        is_retro: {}
-        retro_periods:
+        isRetro: 
+          venus: true
+          mars: true
+          jupiter: true
+          saturn: true
+          uranus: true
+          neptune: true
+          pluto: true
+        retroPeriods:
           mercury:
             - year: 2020
               period: June 18 - July 12
