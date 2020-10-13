@@ -1,5 +1,5 @@
 {
-  "is_retro": {
+  "isRetro": {
     "mercury": true,
     "venus": true,
     "mars": true,
@@ -9,7 +9,7 @@
     "neptune": true,
     "pluto": true
   },
-  "retro_periods": {
+  "retroPeriods": {
     "mercury": [
       {
         "year": 2020,
