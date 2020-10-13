@@ -117,7 +117,7 @@ const scrap = async (planetsArr) => {
       const retroDates = await planetScrap(planet);
       // console.log('retroDates', retroDates);
 
-      retros[planet.name] = retroDates;
+      retros[planet.name.toLowerCase()] = retroDates;
     }
 
     console.log(retros)
