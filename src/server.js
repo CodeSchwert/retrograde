@@ -5,6 +5,7 @@ import swaggerUi from 'swagger-ui-express';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import retroRouter from './routers/retrograde';
 
 // constants
 const PORT = process.env.PORT || 5000;
@@ -24,7 +25,7 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 // routes
-// TBA
+server.use('/api/astrology', retroRouter());
 
 // start server
 if (NODE_ENV !== 'test') {
