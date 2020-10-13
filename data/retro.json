@@ -1,5 +1,5 @@
 {
-  "Mercury": [
+  "mercury": [
     {
       "year": 2020,
       "period": "February 17 - March 10",
@@ -37,7 +37,7 @@
       "endDateDay": "3"
     }
   ],
-  "Venus": [
+  "venus": [
     {
       "year": 2020,
       "period": "May 13 - June 25",
@@ -51,7 +51,7 @@
       "endDateDay": "25"
     }
   ],
-  "Mars": [
+  "mars": [
     {
       "year": 2020,
       "period": "September 9 - November 12",
@@ -65,7 +65,7 @@
       "endDateDay": "12"
     }
   ],
-  "Jupiter": [
+  "jupiter": [
     {
       "year": 2020,
       "period": "May 14 - September 12",
@@ -79,7 +79,7 @@
       "endDateDay": "12"
     }
   ],
-  "Saturn": [
+  "saturn": [
     {
       "year": 2020,
       "period": "May 11- September 29",
@@ -93,7 +93,7 @@
       "endDateDay": "29"
     }
   ],
-  "Uranus": [
+  "uranus": [
     {
       "year": 2020,
       "period": "August 15 - January 14",
@@ -107,7 +107,7 @@
       "endDateDay": "14"
     }
   ],
-  "Neptune": [
+  "neptune": [
     {
       "year": 2020,
       "period": "June 22 - November 28",
@@ -121,7 +121,7 @@
       "endDateDay": "28"
     }
   ],
-  "Pluto": [
+  "pluto": [
     {
       "year": 2020,
       "period": "April 25 - October 4",

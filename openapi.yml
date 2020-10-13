@@ -1,0 +1,140 @@
+openapi: 3.0.2
+info:
+  title: Retrograde Planets API
+  version: '1.0'
+servers:
+  - url: /api/astrology
+paths:
+  /retrograde:
+    get:
+      summary: Get retrograde summary and dates info.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrogradeData'
+  /is_retrograde:
+    get:
+      summary: Get summary retrograde planets.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IsRetro'
+components:
+  schemas:
+    IsRetro:
+      type: object
+      properties:
+        mercury:
+          type: boolean
+        venus:
+          type: boolean
+        mars:
+          type: boolean
+        jupiter:
+          type: boolean
+        saturn:
+          type: boolean
+        uranus:
+          type: boolean
+        neptune:
+          type: boolean
+        pluto:
+          type: boolean
+    RetrogradePeriod:
+      description: Date time data for one retrograde period.
+      type: object
+      properties:
+        year":
+          type: integer
+        period:
+          type: string
+        startDateTime:
+          type: integer
+        endDateTime:
+          type: integer
+        startDate:
+          type: string
+        endDate:
+          type: string
+        startDateMonth:
+          type: string
+        startDateDay:
+          type: integer
+        endDateMonth:
+          type: string
+        endDateDay:
+          type: integer
+      example:
+        year: 2020
+        period: June 18 - July 12
+        startDateTime: 1592395200000
+        endDateTime: 1594468800000
+        startDate: June 18
+        endDate: July 12
+        startDateMonth: June
+        startDateDay: '18'
+        endDateMonth: July
+        endDateDay: '12'
+    PlanetRetroPeriods:
+      description: An array of retrograde periods specific to one planet.
+      type: array
+      items:
+        $ref: '#/components/schemas/RetrogradePeriod'
+    RetrogradeData:
+      type: object
+      properties:
+        isRetro:
+          $ref: '#/components/schemas/IsRetro'
+        retroPeriods:
+          type: object
+          properties:
+            mercury:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            venus:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            mars:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            jupiter:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            saturn:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            uranus:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            neptune:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+            pluto:
+              $ref: '#/components/schemas/PlanetRetroPeriods'
+      example:
+        isRetro: 
+          venus: true
+          mars: true
+          jupiter: true
+          saturn: true
+          uranus: true
+          neptune: true
+          pluto: true
+        retroPeriods:
+          mercury:
+            - year: 2020
+              period: June 18 - July 12
+              startDateTime: 1592395200000
+              endDateTime: 1594468800000
+              startDate: June 18
+              endDate: July 12
+              startDateMonth: June
+              startDateDay: '18'
+              endDateMonth: July
+              endDateDay: '12'
+          venus: []
+          mars: []
+          jupiter: []
+          saturn: []
+          uranus: []
+          neptune: []
+          pluto: []
