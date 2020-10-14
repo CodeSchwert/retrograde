@@ -13,7 +13,8 @@
     "start:watch": "yarn run build && nodemon --watch src --exec yarn start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "yarn run start:watch",
-    "scrape": "node ./data/scrape.js"
+    "scrape": "node ./data/scrape.js",
+    "heroku:deploy": "heroku container:push web -a is-retrograde && heroku container:release web -a is-retrograde"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -10,7 +10,6 @@ const getIsRetro = () => {
   const isRetro = {};
 
   for (const planet in retroData) {
-    // console.log('getIsRetro', planet);
     isRetro[planet.toLowerCase()] = isRetroMonth(retroData[planet]);
   }
 

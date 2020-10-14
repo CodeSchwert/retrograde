@@ -8,7 +8,6 @@
 const isRetroMonth = (retroPeriods /** array */) => {
   let isRetro = false;
   const currentTime = new Date().getTime();
-  console.log(currentTime);
   
   for (const period of retroPeriods) {
     const { startDateTime, endDateTime } = period;
