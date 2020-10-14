@@ -15,3 +15,15 @@ yarn run dev
 ```
 
 View the local OpenAPI specification - [http://localhost:5000/openapi](http://localhost:5000/openapi)
+
+## Docker Container
+
+Instructions for building and running the container.
+
+```shell
+# Build the container image
+docker build -t codeschwert/retrograde:latest .
+
+# Launch the container
+docker run --name retrograde --rm -d -p 5000:5000 codeschwert/retrograde
+```
