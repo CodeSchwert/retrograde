@@ -63,7 +63,6 @@ const monthInt = (monthString) => {
 
 const planetScrap = async (planet) => {
   try {
-    const year = 2020;
     const site = 'https://www.astrology.com/retrograde';
 
     console.log(`Scraping ${planet.name}`);
@@ -79,24 +78,39 @@ const planetScrap = async (planet) => {
       for (const el of dates) {
         const dateText = el.innerText;
 
+        let startYear = 2020;
+        let endYear = 2020;
+
         // Typo in the Saturn date text, missing space between dash
         const [startDate, endDate] = planet.name == 'Saturn' 
           ? dateText.split('- ') 
           : dateText.split(' - ');
-        const [startDateMonth, startDateDay] = startDate.split(' ');
-        const [endDateMonth, endDateDay] = endDate.split(' ');
-        const startDateTime = new Date(year, monthInt(startDateMonth), startDateDay).getTime();
-        const endDateTime = new Date(year, monthInt(endDateMonth), endDateDay).getTime();
+        const [startDateMonth, startDateDayStr] = startDate.split(' ');
+        const [endDateMonth, endDateDayStr] = endDate.split(' ');
+
+        const startDateDay = parseInt(startDateDayStr);
+        const endDateDay = parseInt(endDateDayStr);
+
+        let startDateTime = new Date(startYear, monthInt(startDateMonth), startDateDay).getTime();
+        let endDateTime = new Date(endYear, monthInt(endDateMonth), endDateDay).getTime();
+
+        // if endDateTime is less than startDateTime 
+        // presumably the end date is in the next year
+        if (endDateTime < startDateTime) {
+          endYear = endYear += 1;
+          endDateTime = new Date(endYear, monthInt(endDateMonth), endDateDay).getTime();
+        }
 
         retroDates.push({
-          year,
           period: dateText,
           startDateTime,
           endDateTime,
+          startYear,
           startDate,
-          endDate,
           startDateMonth,
           startDateDay,
+          endYear,
+          endDate,
           endDateMonth,
           endDateDay
         });

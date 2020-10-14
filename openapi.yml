@@ -50,37 +50,40 @@ components:
       description: Date time data for one retrograde period.
       type: object
       properties:
-        year":
-          type: integer
         period:
           type: string
         startDateTime:
           type: integer
         endDateTime:
           type: integer
+        startYear:
+          type: integer
         startDate:
-          type: string
-        endDate:
           type: string
         startDateMonth:
           type: string
         startDateDay:
           type: integer
+        endYear:
+          type: integer
+        endDate:
+          type: string
         endDateMonth:
           type: string
         endDateDay:
           type: integer
       example:
-        year: 2020
-        period: June 18 - July 12
-        startDateTime: 1592395200000
-        endDateTime: 1594468800000
-        startDate: June 18
-        endDate: July 12
-        startDateMonth: June
-        startDateDay: '18'
-        endDateMonth: July
-        endDateDay: '12'
+        period: August 15 - January 14
+        startDateTime: 1597406400000
+        endDateTime: 1610535600000
+        startYear: 2020
+        startDate: August 15
+        startDateMonth: August
+        startDateDay: 15
+        endYear: 2021
+        endDate: January 14
+        endDateMonth: January
+        endDateDay: 14
     PlanetRetroPeriods:
       description: An array of retrograde periods specific to one planet.
       type: array
@@ -120,21 +123,22 @@ components:
           neptune: true
           pluto: true
         retroPeriods:
-          mercury:
-            - year: 2020
-              period: June 18 - July 12
-              startDateTime: 1592395200000
-              endDateTime: 1594468800000
-              startDate: June 18
-              endDate: July 12
-              startDateMonth: June
-              startDateDay: '18'
-              endDateMonth: July
-              endDateDay: '12'
+          mercury: []
           venus: []
           mars: []
           jupiter: []
           saturn: []
-          uranus: []
+          uranus:
+            - period: August 15 - January 14
+              startDateTime: 1597406400000
+              endDateTime: 1610535600000
+              startYear: 2020
+              startDate: August 15
+              startDateMonth: August
+              startDateDay: 15
+              endYear: 2021
+              endDate: January 14
+              endDateMonth: January
+              endDateDay: 14
           neptune: []
           pluto: []
